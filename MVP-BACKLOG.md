@@ -72,7 +72,7 @@ Concise epics, user stories, and acceptance criteria for MVP.
 
 - User story: As a user, I can sign in via app SSO (IdP behind the app) to access interactive features.
   - Acceptance criteria:
-    - App SSO supports the configured identity providers.
+    - App SSO is the only authentication method.
     - App session persists across browser refresh.
     - Signed-out users can view embeds in read-only mode.
     - Signed-in users can interact (submit ideas, vote, comment if enabled).

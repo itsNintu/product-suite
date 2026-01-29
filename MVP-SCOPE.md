@@ -22,7 +22,7 @@ Deliver a minimal, reliable embedded experience that can be placed inside a Disc
 ## Out of Scope
 - Standalone site or direct navigation entry points
 - Private or paid content gating beyond public read-only
-- Alternative identity providers or custom SSO flows
+- Multiple identity providers or alternative SSO flows
 - Full Discourse plugin development or deep platform integration
 - Advanced personalization, recommendations, or moderation tooling
 - Multi-tenant admin consoles or extensive role management

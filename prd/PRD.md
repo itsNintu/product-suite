@@ -88,7 +88,7 @@ Retell will ship a unified feedback -> roadmap -> changelog application that cap
 ## Auth/SSO (App SSO)
 - App session is the source of truth for embeds.
 - IdP remains behind the app (not used directly by embeds).
-- Support SSO for customers with enterprise connections.
+- Single authentication method only (app SSO).
 - Map app session user to Discourse account for seamless embedding.
 - JWT-based session exchange between Retell app and Discourse.
 - Roles derived from app/session metadata.
