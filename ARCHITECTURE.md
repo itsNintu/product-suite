@@ -8,7 +8,7 @@ Build a standalone app (modern stack) for ideas → roadmap → changelog, embed
 - Discourse is hosted on **community.retell.ai** (paid tier) with a custom theme.
 - We cannot modify Discourse navigation; embeds only (no nav changes).
 - The new app should live on a subdomain (e.g., **feedback.retell.ai**).
-- App SSO is the source of truth for sessions; Auth0 remains behind the app.
+- App SSO is the source of truth for sessions; the IdP remains behind the app.
 - Public read‑only access; auth required for interactions.
 
 ## 3) Assumptions / TBD
@@ -20,7 +20,7 @@ Build a standalone app (modern stack) for ideas → roadmap → changelog, embed
 **Web App:** Next.js (App Router, proposed) + shadcn UI (baseline) on **feedback.retell.ai**.
 **Backend:** Next.js API routes or server actions (TBD) to serve data and auth‑gated actions.
 **Database:** Convex (proposed) with Convex schema and server functions (TBD).
-**Auth:** App SSO (Auth0 behind the app; not used directly by embeds).
+**Auth:** App SSO (IdP behind the app; not used directly by embeds).
 **Email:** Resend (confirmed).
 
 ## 5) Embed Strategy (Embeds Only)
@@ -47,7 +47,7 @@ Build a standalone app (modern stack) for ideas → roadmap → changelog, embed
 
 ### Auth-embed findings (Jan 2026)
 - Discourse does not support full-page iframe embedding; only theme components are allowed on the hosted paid tier.
-- App session is the source of truth; embeds should not call Auth0 directly.
+- App session is the source of truth; embeds should not call the IdP directly.
 - Iframe remains third-party; session reuse can break due to browser privacy blocks.
 - Provide a fallback “Log in” button inside the embed when session sync fails.
 - Token handoff from Discourse is likely infeasible on hosted Discourse without plugins.
@@ -98,7 +98,7 @@ Build a standalone app (modern stack) for ideas → roadmap → changelog, embed
 - PM/Admin: manage roadmap + changelog.
 
 ## 11) Risks & Mitigations
-- **Iframe auth limitations** → app session + top-level login; avoid direct Auth0 in embeds.
+- **Iframe auth limitations** → app session + top-level login; avoid direct IdP in embeds.
 - **Auth gating reduces interaction** → lightweight prompts, preserve view‑only access.
 - **Spam** → rate limits + moderation queue.
 

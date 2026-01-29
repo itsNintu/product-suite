@@ -87,7 +87,7 @@ Retell will ship a unified feedback -> roadmap -> changelog application that cap
 
 ## Auth/SSO (App SSO)
 - App session is the source of truth for embeds.
-- Auth0 remains behind the app (not used directly by embeds).
+- IdP remains behind the app (not used directly by embeds).
 - Support SSO for customers with enterprise connections.
 - Map app session user to Discourse account for seamless embedding.
 - JWT-based session exchange between Retell app and Discourse.
@@ -97,7 +97,7 @@ Retell will ship a unified feedback -> roadmap -> changelog application that cap
 ## Embed Strategy (Embeds Only)
 - Embed ideas/roadmap/changelog views directly inside Discourse.
 - Use Discourse theme component and iframe with app SSO-driven auth.
-- Avoid direct Auth0 usage in the embed; rely on app session + SSO exchange.
+- Avoid direct IdP usage in the embed; rely on app session + SSO exchange.
 - All interactions remain in the embedded view; only auth uses a top-level app login when needed.
 - Styling uses basic shadcn defaults for now.
 - Embedded views do not add Discourse navigation or back-navigation.
